@@ -1,0 +1,42 @@
+* { margin:0; padding:0; box-sizing:border-box; }
+body, html { width:100%; height:100%; overflow:hidden; font-family:sans-serif; background:#000; }
+
+/* CUTSCENE FULLSCREEN */
+#cutscene { position:relative; width:100%; height:100%; cursor:pointer; }
+
+/* VIDEO ELEMENT */
+.scene-media {
+  position:absolute; top:0; left:0;
+  width:100%; height:100%;
+  object-fit:cover;
+  opacity:0; transition:opacity 1s ease-in-out;
+}
+
+/* DIALOGUE BOX */
+.dialogue-box {
+  position:absolute; bottom:10%; left:50%;
+  transform:translateX(-50%);
+  background:rgba(0,0,0,0.5); padding:1em 2em;
+  border-radius:8px; max-width:80%;
+  opacity:0; transition:opacity 1s ease-in-out;
+}
+.dialogue-box p { color:#fff; font-size:1.2rem; text-align:center; }
+
+/* SKIP HINT */
+#skip-hint {
+  position:absolute; top:5%; right:5%;
+  color:rgba(255,255,255,0.6); font-size:0.9rem;
+  opacity:0; transition:opacity 1s;
+}
+#cutscene:hover #skip-hint { opacity:1; }
+
+/* HIDDEN STATE */
+.hidden { display:none; }
+
+/* NAME INPUT SCREEN */
+#name-input {
+  display:flex; flex-direction:column; align-items:center; justify-content:center;
+  width:100%; height:100%; background:#000; color:#fff;
+}
+#name-input input { padding:0.5em; margin:0.5em; font-size:1rem; }
+#name-input button { padding:0.5em 1em; font-size:1rem; }

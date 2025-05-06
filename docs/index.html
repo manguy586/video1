@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Reverie: Between Day and Dream</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- CUTSCENE -->
+  <div id="cutscene">
+    <video id="scene-video" class="scene-media" muted></video>
+    <div id="dialogue-box" class="dialogue-box">
+      <p id="dialogue-text"></p>
+    </div>
+    <div id="skip-hint">Click or tap to skip</div>
+  </div>
+
+  <!-- NAME INPUT -->
+  <div id="name-input" class="hidden">
+    <p>What is your name?</p>
+    <input type="text" id="player-name" />
+    <button id="submit-name">Continue</button>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
